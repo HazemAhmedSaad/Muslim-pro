@@ -1,0 +1,108 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+.extend {
+  padding-bottom: 60px;
+  display: grid;
+  place-items: center;
+}
+.extend img {
+  max-width: 100%;
+}
+
+.extend ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2rem;
+  list-style: none;
+}
+.extend ul a {
+  text-decoration: none;
+  list-style: none;
+}
+.extend ul a li {
+  transition: 0.3s;
+  width: 145px;
+  height: 130px;
+}
+.extend ul a li:hover {
+  transform: scale(1.2);
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  --iconS: 6rem;
+  --iconOffsetX: calc(var(--iconS) / 4);
+  --iconOffsetY: calc(var(--iconS) / 2.5);
+  margin-top: var(--iconOffsetY);
+  margin-inline: var(--iconOffsetX);
+  border-radius: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #fff;
+  --shadowSurface: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 0.25);
+  --bgGradient: radial-gradient(
+    circle at bottom right,
+    transparent,
+    rgb(0 0 0 / 0.1)
+  );
+  background-image: radial-gradient(
+      circle at calc(var(--iconOffsetX) * -1 + var(--iconS) / 2)
+        calc(var(--iconOffsetY) * -1 + var(--iconS) / 2),
+      rgb(0 0 0 / 0.4) calc(var(--iconS) / 2),
+      transparent calc(var(--iconS) / 1.6)
+    ),
+    radial-gradient(
+      circle at calc(var(--iconOffsetX) * -1 + var(--iconS) / 2)
+        calc(var(--iconOffsetY) * -1 + var(--iconS) / 2),
+      var(--accent-color) calc(var(--iconS) / 1.4),
+      transparent calc(var(--iconS) / 1.4 + 1px)
+    ),
+    var(--bgGradient);
+  --shadowInsetLight: inset 0.125rem 0.125rem 0.125rem rgb(255 255 255 / 0.5);
+  --shadowInsetDark: inset -0.067rem -0.067rem 0.067rem rgb(0 0 0 / 0.5);
+  box-shadow: var(--shadowInsetLight), var(--shadowInsetDark),
+    var(--shadowSurface);
+}
+.box .icon {
+  width: var(--iconS);
+  aspect-ratio: 1;
+  margin-top: calc(var(--iconOffsetY) * -1);
+  margin-left: calc(var(--iconOffsetX) * -1);
+  margin-bottom: calc(var(--iconS) / 4);
+  display: grid;
+  place-items: center;
+  color: var(--accent-color);
+  font-size: calc(var(--iconS) / 3);
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow: var(--shadowInsetLight), var(--shadowInsetDark);
+  background-image: var(--bgGradient);
+}
+.box .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+.box .content {
+  padding: 1rem;
+  padding-bottom: 2rem;
+  font-size: 0.9em;
+}
+.extend .container {
+  padding: 0;
+  margin: 0;
+}
+.extend .container .extend-content {
+  padding-top: 60px;
+}

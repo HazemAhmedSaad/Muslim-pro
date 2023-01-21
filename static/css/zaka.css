@@ -1,0 +1,54 @@
+.h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: grey;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 10px;
+}
+
+.zakat-content {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+
+.flex-cont {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.money {
+  margin-bottom: 15x;
+}
+
+.years {
+  margin-bottom: 15px;
+}
+
+.label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
